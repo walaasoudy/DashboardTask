@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4 mb-5 bg-white rounded text-center animate__animated animate__fadeIn">
+    <div class="card-body">
+      <h1 class="display-4">{{ details.id }}</h1>
+      <h1 class="h5 text-muted">{{ details.email }}</h1>
+      <h1 class="h3">{{ details.first_name }} {{ details.last_name }}</h1>
+
+      <img [src]="details.avatar" class="rounded-circle img-fluid my-4 avatar-animate" alt="User Avatar" width="150" />
+
+      <button class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite ms-2" routerLink="/userlist">
+        <i class="bi bi-arrow-left"></i> Back
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<!--
+
+
+<input [(ngModel)] ="searchvalue"   title="search" >
+
+<div  *ngFor="let i of data | search:searchvalue"   (click)="click(i.id)" >
+<h1>{{i.id}}</h1>
+
+<h1>{{i.first_name}}</h1>
+<h1>{{i.last_name}}</h1>
+
+
+</div> -->
+<div class="container mt-5">
+  <div class="row mb-4">
+    <div class="col-md-8 offset-md-2">
+      <input [(ngModel)]="searchvalue" class="form-control form-control-lg" placeholder="Search" title="search">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div *ngFor="let i of data | search:searchvalue" class="card mb-3 shadow-sm animate__animated animate__fadeIn" (click)="click(i.id)">
+        <div class="card-body">
+          <h1 class="display-6">{{ i.id }}</h1>
+          <h2 class="h4">{{ i.first_name }} {{ i.last_name }}</h2>
+      <img [src]="i.avatar" class="rounded-circle img-fluid my-4 avatar-animate" alt="User Avatar" width="150" />
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
